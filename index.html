@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name – Portfolio</title>
+<meta name="description" content="Portfolio of Your Name, a designer and developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eef1f5;
+    --ink: #14213d;
+    --muted: #55607a;
+    --line: #c9d1de;
+    --accent: #2f4bff;
+    --font: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1626;
+      --ink: #e8ecf6;
+      --muted: #98a3bd;
+      --line: #2a3550;
+      --accent: #7f93ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top { padding: 1.5rem 0; }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-weight: 800; text-decoration: none; }
+  nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--accent); }
+
+  .hero { padding: 5rem 0 4rem; }
+  .hero h1 {
+    font-size: clamp(2.75rem, 9vw, 6rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    margin: 0 0 1.5rem;
+  }
+  .hero p { max-width: 34rem; font-size: 1.25rem; color: var(--muted); margin: 0 0 2rem; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn:hover { filter: brightness(1.1); }
+  @media (prefers-color-scheme: dark) { .btn { color: #0f1626; } }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.75rem; letter-spacing: -0.02em; margin: 0 0 2rem; }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+  .project:first-of-type { padding-top: 0; }
+  .project h3 { margin: 0; font-size: 1.35rem; }
+  .project:hover h3 { color: var(--accent); }
+  .project p { margin: 0.25rem 0 0; color: var(--muted); max-width: 36rem; }
+  .project .meta { color: var(--muted); font-size: 0.95rem; text-align: right; }
+  @media (max-width: 560px) {
+    .project { grid-template-columns: 1fr; }
+    .project .meta { text-align: left; }
+    nav a { margin-left: 1rem; }
+  }
+
+  .about { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+  .about p { margin: 0 0 1rem; max-width: 36rem; }
+  .skills { list-style: none; margin: 0; padding: 0; color: var(--muted); }
+  .skills li { padding: 0.35rem 0; border-bottom: 1px solid var(--line); }
+  @media (max-width: 700px) { .about { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .contact a.mail { font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; }
+  .contact ul { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: 0.95rem; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Your Name</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <h1>I build clear, useful things for the web.</h1>
+      <p>I'm Your Name, a [designer / developer / writer] based in [City]. I help [type of client] turn ideas into products people enjoy using.</p>
+      <a class="btn" href="#work">See my work</a>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+
+      <a class="project" href="#">
+        <div>
+          <h3>Project One</h3>
+          <p>One sentence on the problem you solved and the result it produced.</p>
+        </div>
+        <div class="meta">Web app<br>2025</div>
+      </a>
+
+      <a class="project" href="#">
+        <div>
+          <h3>Project Two</h3>
+          <p>One sentence on your role and what you built or designed.</p>
+        </div>
+        <div class="meta">Mobile app<br>2024</div>
+      </a>
+
+      <a class="project" href="#">
+        <div>
+          <h3>Project Three</h3>
+          <p>One sentence on the outcome, such as users reached or time saved.</p>
+        </div>
+        <div class="meta">Brand and website<br>2023</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About</h2>
+        <p>Write two or three short paragraphs here. Say what you do, how you work, and what you care about when you build something.</p>
+        <p>Mention your background briefly, then what you're looking for now: freelance projects, a full-time role, or collaborations.</p>
+      </div>
+      <ul class="skills" aria-label="Skills">
+        <li>Skill or tool one</li>
+        <li>Skill or tool two</li>
+        <li>Skill or tool three</li>
+        <li>Skill or tool four</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:you@example.com">you@example.com</a>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Resume (PDF)</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Your Name</div>
+</footer>
+
+</body>
+</html>
